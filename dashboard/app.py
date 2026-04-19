@@ -37,8 +37,19 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-NEON_URL = "postgresql://neondb_owner:npg_NpQ4SulBe3nq@ep-frosty-field-amxfexd9-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require"
+import os
 
+try:
+    NEON_URL = st.secrets["NEON_URL"]
+except (FileNotFoundError, KeyError):
+    from dotenv import load_dotenv
+    load_dotenv()
+    NEON_URL = os.getenv("NEON_URL")
+
+if not NEON_URL:
+    st.error("NEON_URL not configured. Set it in .env locally or Streamlit secrets in the cloud.")
+    st.stop()
+    
 @st.cache_data
 def load_orders():
     engine = create_engine(NEON_URL)

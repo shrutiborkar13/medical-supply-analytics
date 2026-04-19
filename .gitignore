@@ -1,0 +1,28 @@
+@"
+# Environments
+.env
+.env.*
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Data (gitignored since raw datasets are large)
+data/raw/
+*.csv
+*.parquet
+
+# Streamlit
+.streamlit/secrets.toml
+"@ | Out-File -FilePath .gitignore -Encoding utf8
