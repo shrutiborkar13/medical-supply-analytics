@@ -2,8 +2,7 @@
 
 An end-to-end data engineering project tracking **100K+ medical supply orders** across delivery performance, logistics delays, and payment fraud signals.
 
-<!-- Uncomment once dashboard URL is confirmed -->
-<!-- **🔗 Live dashboard → [Click here](https://your-url.streamlit.app)** -->
+**🔗 Live dashboard → [medical-supply-shruti-borkar.streamlit.app](https://medical-supply-shruti-borkar.streamlit.app/)**
 
 ---
 
